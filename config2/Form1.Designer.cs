@@ -34,11 +34,11 @@
             this.lblIniList = new System.Windows.Forms.Label();
             this.cbIniList = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnActivate = new System.Windows.Forms.Button();
-            this.btnBrowse = new System.Windows.Forms.Button();
             this.lblSerial = new System.Windows.Forms.Label();
-            this.lblType = new System.Windows.Forms.Label();
+            this.btnActivate = new System.Windows.Forms.Button();
             this.lblTextSerial = new System.Windows.Forms.Label();
+            this.lblType = new System.Windows.Forms.Label();
+            this.btnBrowse = new System.Windows.Forms.Button();
             this.lblTextType = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -99,6 +99,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " Configuration files ";
             // 
+            // lblSerial
+            // 
+            this.lblSerial.AutoSize = true;
+            this.lblSerial.Location = new System.Drawing.Point(302, 146);
+            this.lblSerial.Name = "lblSerial";
+            this.lblSerial.Size = new System.Drawing.Size(10, 13);
+            this.lblSerial.TabIndex = 3;
+            this.lblSerial.Text = "-";
+            // 
             // btnActivate
             // 
             this.btnActivate.Enabled = false;
@@ -110,24 +119,14 @@
             this.btnActivate.UseVisualStyleBackColor = true;
             this.btnActivate.Click += new System.EventHandler(this.btnActivate_Click);
             // 
-            // btnBrowse
+            // lblTextSerial
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(524, 44);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowse.TabIndex = 4;
-            this.btnBrowse.Text = "Browse...";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
-            // 
-            // lblSerial
-            // 
-            this.lblSerial.AutoSize = true;
-            this.lblSerial.Location = new System.Drawing.Point(302, 146);
-            this.lblSerial.Name = "lblSerial";
-            this.lblSerial.Size = new System.Drawing.Size(10, 13);
-            this.lblSerial.TabIndex = 3;
-            this.lblSerial.Text = "-";
+            this.lblTextSerial.AutoSize = true;
+            this.lblTextSerial.Location = new System.Drawing.Point(243, 146);
+            this.lblTextSerial.Name = "lblTextSerial";
+            this.lblTextSerial.Size = new System.Drawing.Size(53, 13);
+            this.lblTextSerial.TabIndex = 1;
+            this.lblTextSerial.Text = "Serial No:";
             // 
             // lblType
             // 
@@ -138,14 +137,15 @@
             this.lblType.TabIndex = 2;
             this.lblType.Text = "-";
             // 
-            // lblTextSerial
+            // btnBrowse
             // 
-            this.lblTextSerial.AutoSize = true;
-            this.lblTextSerial.Location = new System.Drawing.Point(243, 146);
-            this.lblTextSerial.Name = "lblTextSerial";
-            this.lblTextSerial.Size = new System.Drawing.Size(53, 13);
-            this.lblTextSerial.TabIndex = 1;
-            this.lblTextSerial.Text = "Serial No:";
+            this.btnBrowse.Location = new System.Drawing.Point(524, 44);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowse.TabIndex = 4;
+            this.btnBrowse.Text = "Browse...";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // lblTextType
             // 
@@ -174,7 +174,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Configuration changer tool";
+            this.Text = "Configuration INI Changer Tool";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
